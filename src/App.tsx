@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import BaseComponent from './components/BaseComponent'
+import ExtendedComponent from './components/ExtendedComponent';
+import Button from './components/Button';
+import Form from './components/Form';
+import Modal from './components/Modal';
 
-function App() {
+
+const App: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+  const handleSubmit = (data: any) => {
+    console.log('Form data:', data);
+    setIsModalOpen(false);
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BaseComponent title="Base Component" description="This is a base component." />
+      <ExtendedComponent title="Extended Component" description="This is an extended component." additionalInfo="Additional Information" />
+
+      <Button label="Open Modal" onClick={handleOpenModal} />
+      <Modal title="Form Modal" isOpen={isModalOpen} onClose={handleCloseModal}>
+        <Form onSubmit={handleSubmit} />
+      </Modal>
+
+
+
     </div>
+
+
+
   );
-}
+};
 
 export default App;
