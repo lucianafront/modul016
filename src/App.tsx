@@ -19,11 +19,12 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <BaseComponent title="Base Component" description="This is a base component." />
-      <ExtendedComponent title="Extended Component" description="This is an extended component." additionalInfo="Additional Information" />
+      <BaseComponent title="Componente base" description="Este compontente usa o compoente base 'BaseComponent'" />
+      
+      <ExtendedComponent title="Componente extendido 'ExtendedComponent' de 'BaseComponent'" description="Componente extendido." additionalInfo="mais informações" />
 
-      <Button label="Open Modal" onClick={handleOpenModal} />
-      <Modal title="Form Modal" isOpen={isModalOpen} onClose={handleCloseModal}>
+      <Button label="Abrir modal" onClick={handleOpenModal} />
+      <Modal title="Formulario de modal" isOpen={isModalOpen} onClose={handleCloseModal}>
         <Form onSubmit={handleSubmit} />
       </Modal>
 

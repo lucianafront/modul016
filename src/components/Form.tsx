@@ -15,7 +15,7 @@ const Form: React.FC<FormProps> = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       {/* Campos do formulário */}
-      <Button label="Submit" onClick={handleSubmit} />
+      <Button label="Submeter modal" onClick={handleSubmit} />
     </form>
   );
 };

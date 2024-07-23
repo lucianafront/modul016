@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ButtonProps {
   label: string;
-  onClick: () => void;
+  onClick: (event: React.FormEvent) => void;
 }
 
 const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
@@ -14,3 +14,5 @@ const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
 };
 
 export default Button;
+
+
