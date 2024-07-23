@@ -44,3 +44,17 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+#### Criar um app react ts usando prpps tipado e heranças
+1.configurar um novo projeto com TypeScript(npx create-react-app my-app --template typescript
+cd my-app)
+2.Criar componentes com props tipadas(components/BaseComponent.tsx)
+3.Criar um componente que herda de BaseComponent(components/ExtendedComponent.tsx)
+4.Utilizar os componentes no App(src/App.tsx)
+5.Executar o aplicativo-> (npm start)
+6.criar componetes botao ->(components/Button.tsx)
+7.Criar componente Formulário->(components/Form.tsx)
+8.Criar componente Modal->(components/Modal.tsx)
+9.Utilização dos Componentes no App(src/App.tsx)
+
+
